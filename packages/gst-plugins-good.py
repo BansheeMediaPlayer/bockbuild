@@ -1,7 +1,7 @@
-class GstPluginsGoodPackage (GstreamerXzPackage):
+class GstPluginsGoodPackage (GstreamerPackage):
 	def __init__ (self):
-		GstreamerXzPackage.__init__ (self, 'gstreamer', 'gst-plugins-good',
-			'1.0.10', configure_flags = [
+		GstreamerPackage.__init__ (self, 'gstreamer', 'gst-plugins-good',
+			'0.10.31', configure_flags = [
 				'--disable-gtk-doc',
 				'--disable-gdk_pixbuf',
 				'--disable-cairo',
@@ -19,11 +19,7 @@ class GstPluginsGoodPackage (GstreamerXzPackage):
 		if Package.profile.name == 'darwin':
 			self.configure_flags.extend ([
 				'--disable-x',
-				'--disable-gtk-doc',
-				'--disable-cairo',
-				'--disable-cairo_gobject',
 				'--disable-xvideo',
-				'--disable-deinterlace',
 				'--disable-xshm'
 			])
 
