@@ -43,6 +43,7 @@ class BansheePackages:
 			'glib-networking.py',
 			'libsoup.py',
 			'sqlite.py',
+			'libglade.py', # needed for glade-sharp, which is needed by mono-upnp
 		])
 
 		# banshee-community-extensions
@@ -54,8 +55,7 @@ class BansheePackages:
 			# openvp (currently not working)
 			#'libopentk.py',
 			#'libsdl.py',
-			#'libglade.py',
-
+			#'libglade.py', # do not repeat this dep when enabling OpenVP, as glade-sharp/mono-upnp also depend on it
 		])
 
 		# exclude package with possible patent/copyright issues
