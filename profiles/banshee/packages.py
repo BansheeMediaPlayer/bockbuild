@@ -14,7 +14,6 @@ class BansheePackages:
 			'libtool.py',
 			'gettext.py',
 			'pkg-config.py',
-			'flex.py',
 		])
 
 		# Base Libraries

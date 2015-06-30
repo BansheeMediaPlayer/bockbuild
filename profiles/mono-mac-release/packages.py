@@ -5,26 +5,15 @@ class MonoReleasePackages:
 	def __init__(self):
 
 		# Toolchain
-		#package order is very important.
-		#autoconf and automake don't depend on CC
-		#ccache uses a different CC since it's not installed yet
-		#every thing after ccache needs a working ccache
-		self.packages.extend ([
-			'autoconf.py',
-			'automake.py',
-			'ccache.py',
-			'libtool.py',
-			'xz.py',
-			'tar.py',
-			'gettext.py',
-			'pkg-config.py'
-		])
-
-		#needed to autogen gtk+
-		self.packages.extend ([
-			'gtk-osx-docbook.py',
-			'gtk-doc.py',
-		])
+		self.packages.extend([
+				# 'autoconf.py',
+				# 'automake.py',
+				# 'libtool.py', 
+				'xz.py',
+				'tar.py',
+				'gettext.py',
+				'pkg-config.py'
+				])
 
 		# # Base Libraries
 		self.packages.extend([
@@ -56,9 +45,7 @@ class MonoReleasePackages:
 				'librsvg.py',
 				'hicolor-icon-theme.py',
 				'gtk-engines.py',
-				'murrine.py',
-				'xamarin-gtk-theme.py',
-				'gtk-quartz-engine.py'
+				# 'gtk-quartz-engine.py'
 				])
 
 		# Mono
@@ -71,7 +58,7 @@ class MonoReleasePackages:
 				'boo.py',
 				# 'nant.py',
 				'ironlangs.py',
-				'fsharp-3.0.py',
+				'fsharp.py',
 				'mono-addins.py',
 				'mono-basic.py',
 				])

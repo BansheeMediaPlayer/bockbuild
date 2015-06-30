@@ -9,6 +9,7 @@ class Profile:
 	def __init__ (self, prefix = False):
 		self.name = 'default'
 		self.build_root = os.path.join (os.getcwd (), 'build-root')
+		self.profile_dir = os.getcwd ()
 		self.prefix = prefix if prefix else os.path.join (self.build_root, '_install')
 		self.env = Environment (self)
 		self.env.set ('BUILD_PREFIX', self.prefix)
@@ -132,10 +133,6 @@ class Profile:
 		self.env.export ()
 		for k in self.env.get_names ():
 			log (1, '%s = %s' % (k, os.getenv (k)))
-
-		source_cache = os.getenv('BOCKBUILD_SOURCE_CACHE')
-                source_cache = source_cache or os.path.realpath (os.path.join (self.build_root, "..", "..", "..", "cache"))
-		log (1, 'Source cache: %s' % source_cache)
 
 		Package.profile = self
 

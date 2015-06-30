@@ -11,20 +11,13 @@ class MonoDevelopMacDevPackages:
 			'automake.py',
 			'libtool.py',
 			'gettext.py',
-			'pkg-config.py',
-			'nasm.py'
-		])
-
-		#needed to autogen gtk+
-		self.packages.extend ([
-			'gtk-osx-docbook.py',
-			'gtk-doc.py',
+			'pkg-config.py'
 		])
 
 		# Base Libraries
 		self.packages.extend ([
 			'libpng.py',
-			'libjpeg-turbo.py',
+			'libjpeg.py',
 			'libtiff.py',
 			'libxml2.py',
 			'freetype.py',
@@ -39,7 +32,6 @@ class MonoDevelopMacDevPackages:
 			'gdk-pixbuf.py',
 			'gtk+.py',
 			'libglade.py',
-			'gtkimcocoa.py',
 		])
 
 		# Theme
@@ -49,17 +41,14 @@ class MonoDevelopMacDevPackages:
 			'hicolor-icon-theme.py',
 			'gtk-engines.py',
 			'murrine.py',
-			'gtk-quartz-engine.py',
-			'xamarin-gtk-theme.py',
+			'gtk-quartz-engine.py'
 		])
 
 		# Mono
 		self.packages.extend ([
-			'libgdiplus.py',
-			'mono-llvm.py',
-			'mono-master.py',
+			'mono.py',
 			'gtk-sharp.py',
-			'mono-addins.py'
+			'mono-addins.py',
 		])
 
 		self.packages = [os.path.join ('..', '..', 'packages', p)

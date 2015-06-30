@@ -1,5 +1,1 @@
-Package ('intltool', '0.50.2',
-	sources = [
-		'https://launchpad.net/%{name}/trunk/%{version}/+download/%{name}-%{version}.tar.gz'
-	]
-)
+GnomePackage ('intltool', version_major = '0.40', version_minor = '6')

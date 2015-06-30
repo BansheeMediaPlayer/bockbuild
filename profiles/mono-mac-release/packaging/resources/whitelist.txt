@@ -68,7 +68,6 @@ mod-mono-server
 mod-mono-server2
 mod-mono-server4
 mono
-mono-boehm
 mono-api-info
 mono-cil-strip
 mono-configuration-crypto
@@ -120,3 +119,4 @@ xsd
 xsp
 xsp2
 xsp4
+pkg-config

@@ -51,13 +51,8 @@ public class SymlinkItem : Item
         }
 
         yield return this;
-
-        var item = Item.Resolve (Confinement,
+        yield return Item.Resolve (Confinement,
             new FileInfo (link.GetContents ().FullName));
-
-        foreach (var child_item in item.Load ()) {
-            yield return child_item;
-        }
     }
 
     public override void Relocate ()
