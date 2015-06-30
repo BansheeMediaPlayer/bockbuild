@@ -74,7 +74,8 @@ class GtkPackage (GnomeXzPackage):
 		self.install_gtkrc ()
 
 	def install_gtkrc(self):
-		origin = os.path.join (self.package_dest_dir (), os.path.basename (self.sources[1]))
+		gtkrc = self.sources[1]
+		origin = gtkrc if os.path.isabs (gtkrc) else os.path.join (self.sources_dir (), gtkrc)
 		destdir = os.path.join (self.prefix, "etc", "gtk-2.0")
 		if not os.path.exists (destdir):
 			os.makedirs(destdir)
