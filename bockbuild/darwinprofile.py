@@ -23,7 +23,6 @@ class DarwinProfile (UnixProfile):
 				'-isysroot %{mac_sdk_path}',
 				'-mmacosx-version-min=10.6',
 			])
-			self.mac_sdk_path = sdkroot + 'MacOSX10.6.sdk'
 		elif (os.path.isdir (sdkroot + 'MacOSX10.7.sdk')):
 			self.os_x_minor = 7
 			self.mac_sdk_path = sdkroot + 'MacOSX10.7.sdk'
@@ -32,8 +31,16 @@ class DarwinProfile (UnixProfile):
 				'-isysroot %{mac_sdk_path}',
 				'-mmacosx-version-min=10.7',
 			])
+		elif (os.path.isdir (sdkroot + 'MacOSX10.8.sdk')):
+			self.os_x_minor = 8
+			self.mac_sdk_path = sdkroot + 'MacOSX10.8.sdk'
+			self.gcc_flags.extend ([
+				'-D_XOPEN_SOURCE',
+				'-isysroot %{mac_sdk_path}',
+				'-mmacosx-version-min=10.8',
+			])
 		else:
-			raise IOError ('Mac OS X SDKs 10.6 and 10.7 not found')
+			raise IOError ('Mac OS X SDKs 10.6;10.7;10.8 not found')
 
 		self.gcc_arch_flags = [ '-m32', '-arch i386' ]
 		self.gcc_debug_flags = [ '-O0', '-ggdb3' ]
