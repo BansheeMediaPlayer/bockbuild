@@ -53,8 +53,8 @@ class BansheePackages:
 
 			# openvp (currently not working)
 			#'libopentk.py',
-			'libsdl.py',
-			'libglade.py',
+			#'libsdl.py',
+			#'libglade.py',
 
 		])
 
