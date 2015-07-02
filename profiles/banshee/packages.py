@@ -131,7 +131,10 @@ class BansheePackages:
 			])
 
 		self.packages.append ('banshee.py')
-		self.packages.append ('banshee-bce.py')
+
+		# needs fixage, now points to dynalon's non-existent fork,
+		# and also see https://github.com/BansheeMediaPlayer/bockbuild/commit/1c3e8d8336f837eaed09d3e8e4f3efcb9dc6b2c7
+		#self.packages.append ('banshee-bce.py')
 
 		self.packages = [os.path.join ('..', '..', 'packages', p)
 			for p in self.packages]
