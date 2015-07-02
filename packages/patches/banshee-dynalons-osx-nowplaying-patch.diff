@@ -1,0 +1,13 @@
+diff --git a/src/Extensions/Banshee.NowPlaying/Banshee.NowPlaying/NowPlayingInterface.cs b/src/Extensions/Banshee.NowPlaying/Banshee.NowPlaying/NowPlayingInterface.cs
+index be8a5c2..3119ce9 100644
+--- a/src/Extensions/Banshee.NowPlaying/Banshee.NowPlaying/NowPlayingInterface.cs
++++ b/src/Extensions/Banshee.NowPlaying/Banshee.NowPlaying/NowPlayingInterface.cs
+@@ -99,7 +99,7 @@ private void MoveVideoInternal ()
+         {
+             if (Contents.Parent != frame) {
+                 Contents.Reparent (frame);
+-                Contents.Show ();
++				// Contents.Show ();
+             }
+         }
+ 
