@@ -5,12 +5,8 @@ class BansheePackage (Package):
 		self.sources = [
 			'git://git.gnome.org/banshee',
 
-			# workaround against broken gtk_reparent_*  on gtk-quartz
-			'patches/banshee-dynalons-osx-nowplaying-patch.diff',
-
 			# fix configure complaining about missing HAVE_DBUS_GLIB conditional
 			'patches/banshee-fix-dbus-conditional.patch',
-
 		]
 
 		self.configure = [ 'NOCONFIGURE=1 ./autogen.sh && ./profile-configure %{profile.name} --prefix=%{prefix}' ]
